@@ -31,8 +31,8 @@ export default class DetailsScreen extends Component {
                 renderItem = {({ item }) => (
                     <TouchableOpacity  
                         style={styles.stretch}>
-                        <Image style={{flex: 1}} source={{ uri:  item.image}}></Image>
-                        <Text >{item.name}</Text>
+                        <Image style={{flex: 1, width: 50, height: 50}} source={{ uri:  item.image}}></Image>
+                        <Text style = {styles.textStyle} >{item.name}</Text>
                     </TouchableOpacity>
                 )}
               />
@@ -54,8 +54,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     textStyle: {
-        padding: 40,
+        paddingLeft: 40,
         alignContent: 'center',
+        fontSize : 14,
     }
   });
 
